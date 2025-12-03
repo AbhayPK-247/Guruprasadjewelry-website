@@ -14,7 +14,6 @@ import { useMetalRates } from "@/contexts/MetalRatesContext";
 
 interface ItemCardProps {
   item: any;
-  calculatePrice: (item: any) => number;
   isAdmin?: boolean;
   handleDelete?: (itemId: string, itemName: string) => void;
   discountedMakingCharges?: number | null;

@@ -10,6 +10,7 @@ interface CartItem {
   quantity: number;
   price: number;
   category?: string;
+  metal?: string;
   weight?: number;
   karat?: string;
   making_charges?: number;
@@ -31,7 +32,7 @@ const calculatePrice = (rate: number, weight: number, making_charges: number, ka
 
 interface CartContextType {
   cartItems: CartItem[];
-  addToCart: (item: Omit<CartItem, 'id' | 'quantity'> & { category: string }) => Promise<void>;
+  addToCart: (item: Omit<CartItem, 'id' | 'quantity'> & { category: string, metal: string }) => Promise<void>;
   removeFromCart: (itemId: string) => Promise<void>;
   clearCart: () => Promise<void>;
   isLoading: boolean;

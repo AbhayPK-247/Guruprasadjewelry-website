@@ -132,7 +132,6 @@ const Bridal = () => {
                 <ItemCard
                   key={item.id}
                   item={item}
-                  calculatePrice={calculatePrice}
                 />
               ))}
             </div>
